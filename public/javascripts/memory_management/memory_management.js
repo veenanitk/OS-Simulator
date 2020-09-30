@@ -21,7 +21,7 @@ var procSizes = [];
 var input = "";
 
 var parId = [];
-var internalFrag = [];
+var intfrag = [];
 var externalFrag = [];
 var totalInternal;
 var remainingMem;
@@ -166,7 +166,7 @@ function submit3(){
                     if(i%3==0)
                         parId.push(result[i]);
                     else if((i-1)%3==0)
-                        internalFrag.push(result[i]);
+                        intfrag.push(result[i]);
                     else
                         externalFrag.push(result[i]);
                 }
@@ -194,7 +194,7 @@ function submit3(){
                     if(i%3==0)
                         parId.push(result[i]);
                     else if((i-1)%3==0)
-                        internalFrag.push(result[i]);
+                        intfrag.push(result[i]);
                     else
                         externalFrag.push(result[i]);
                 }
@@ -223,7 +223,7 @@ function submit3(){
                     if(i%3==0)
                         parId.push(result[i]);
                     else if((i-1)%3==0)
-                        internalFrag.push(result[i]);
+                        intfrag.push(result[i]);
                     else
                         externalFrag.push(result[i]);
                 }
@@ -247,7 +247,7 @@ function submit3(){
         {
             ch = "YES";
             ch0 = parId[i];
-            ch1 = internalFrag[i];
+            ch1 = intfrag[i];
             ch2 = "-";
         }
         else if((externalFrag[i] == 0) && (parId[i] == -1)){
@@ -290,7 +290,7 @@ function submit3(){
             var box = S('visual');
             //box.innerHTML = "";
             var tempbox1;
-            var tempbox2 = '<div class="box black-box" id="internalfragbox' + i + '"></div>';
+            var tempbox2 = '<div class="box black-box" id="intfragbox' + i + '"></div>';
             var pos2 = pos +1;
 
             switch(i){
@@ -321,7 +321,7 @@ function submit3(){
             box.innerHTML += tempbox2;
             t1 = S('b' + i);
             $(t1).css("width", procSizes[pos]*scaledown + "px");
-            t2 = S('internalfragbox' + i);
+            t2 = S('intfragbox' + i);
             $(t2).css("width", diff*scaledown + "px");
         }
 
@@ -329,10 +329,10 @@ function submit3(){
 
             diff = partSizes[i];
             var box = S('visual');
-            var tempbox2 = '<div class="box black-box" id="internalfragbox' + i + '"></div>';
+            var tempbox2 = '<div class="box black-box" id="intfragbox' + i + '"></div>';
             var t2;
             box.innerHTML += tempbox2;
-            t2 = S('internalfragbox' + i);
+            t2 = S('intfragbox' + i);
             $(t2).css("width", diff*scaledown + "px");
         }
     }*/

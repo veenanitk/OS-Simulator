@@ -41,7 +41,7 @@ function remove_process(){
 function submit() {
 //    var tq = $("#time_quantum").val();
 
-    var tq = S('time_quantum').value;
+    var tq = S('time_quantum').val;
     if(!tq || tq.length == 0){
         Materialize.toast("Please fill the input fields!!", 1500);
         return;
@@ -60,9 +60,9 @@ function submit() {
     var output =  [];
     var tt = [], wt = [];
     for(var i = 0, j = 0; i < 3*n_processes; i+=3, j++) {
-        var at = S('p_at'+j).value,
-            bt = S('p_bt'+j).value,
-            pt = S('p_pt'+j).value;
+        var at = S('p_at'+j).val,
+            bt = S('p_bt'+j).val,
+            pt = S('p_pt'+j).val;
         if((!at || !bt || !pt) || at.length==0 || bt.length==0 || pt.length==0){
             Materialize.toast("Please fill the input fields!!", 1500);
             return;
